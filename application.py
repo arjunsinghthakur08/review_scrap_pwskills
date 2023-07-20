@@ -69,7 +69,7 @@ def index():
                 writer.writerows(reviews)
 
                
-            client = pymongo.MongoClient("mongodb+srv://Alonewinner:Alonewinner@cluster1.x8c5jdd.mongodb.net/?retryWrites=true&w=majority")
+            client = pymongo.MongoClient("mongodb+srv://arjunsingh:pwskills@cluster0.uljkwjx.mongodb.net/?retryWrites=true&w=majority")
             db = client['flipkart_scrap']
             review_col = db['review_scrap_data']
             review_col.insert_many(reviews)
@@ -83,5 +83,5 @@ def index():
         return render_template('index.html')
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port=8000, debug=True)
+    app.run(host='0.0.0.0', port=8000, debug=True)
 	#app.run(debug=True)
